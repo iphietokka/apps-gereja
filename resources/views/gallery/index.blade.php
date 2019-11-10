@@ -37,7 +37,7 @@
                           <div class="form-group{{ $errors->has('gallery_img') ? ' has-error' : '' }}">
                           	  <input type="hidden" name="id" value="{{$gallery->id}}">
                            <label for="inputPassword3" class="col-sm-3 control-label">Change</label>
-				        	<input type="file" class="form-control" placeholder="photo" name="gambar">
+				        	          <input type="file" class="form-control" placeholder="photo" name="gambar">
                             <small class="text-danger">{{ $errors->first('gallery_img') }}</small>
                           </div>
                         </div>

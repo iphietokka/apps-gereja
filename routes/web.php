@@ -77,7 +77,6 @@ Route::post('laporan/sidi', 'LaporanController@sidi')->name('laporan-sidi');
 
 Route::get('berita', 'BeritaController@index')->name('berita');
 Route::get('berita/create', 'BeritaController@create')->name('berita-create');
-
 Route::post('berita/store', 'BeritaController@store')->name('berita-store');
 Route::get('berita/edit/{id}', 'BeritaController@edit')->name('berita-edit');
 Route::post('berita/edit', 'BeritaController@update')->name('berita-update');
@@ -101,3 +100,17 @@ Route::post('pendaftaran-baptis/store', 'PendaftaranBaptisController@store')->na
 Route::get('pendaftaran-baptis/edit/{id}', 'PendaftaranBaptisController@edit')->name('pendaftaran-baptis-edit');
 Route::post('pendaftaran-baptis/update', 'PendaftaranBaptisController@update')->name('pendaftaran-baptis-update');
 Route::delete('pendaftaran-baptis/{id}', 'PendaftaranBaptisController@destroy')->name('pendaftaran-baptis-delete');
+
+Route::get('jadwal-ibadah', 'JadwalIbadahController@index')->name('jadwal-ibadah');
+Route::get('jadwal-ibadah/create', 'JadwalIbadahController@create')->name('jadwal-ibadah-create');
+Route::post('jadwal-ibadah/store', 'JadwalIbadahController@store')->name('jadwal-ibadah-store');
+Route::get('jadwal-ibadah/edit/{id}', 'JadwalIbadahController@edit')->name('jadwal-ibadah-edit');
+Route::post('jadwal-ibadah/update', 'JadwalIbadahController@update')->name('jadwal-ibadah-update');
+Route::delete('jadwal-ibadah/{id}', 'JadwalIbadahController@destroy')->name('jadwal-ibadah-delete');
+
+Route::get('warta', 'WartaJemaatController@index')->name('warta');
+Route::get('warta/create', 'WartaJemaatController@create')->name('warta-create');
+Route::post('warta/store', 'WartaJemaatController@store')->name('warta-store');
+Route::get('warta/edit/{id}', 'WartaJemaatController@edit')->name('warta-edit');
+Route::post('warta/edit', 'WartaJemaatController@update')->name('warta-update');
+Route::delete('warta/{id}', 'WartaJemaatController@destroy')->name('warta-delete');

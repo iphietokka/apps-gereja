@@ -70,7 +70,54 @@
         </div>
     </section>
     <!-- ##### Latest Sermons Area End ##### -->
+  <!-- ##### Upcoming Events Area Start ##### -->
+    <section class="upcoming-events-area section-padding-0-100">
+        <!-- Upcoming Events Heading Area -->
+        <div class="upcoming-events-heading bg-img bg-overlay bg-fixed" style="background-image: url(frontend/img/bg-img/1.jpg);">
+            <div class="container">
+                <div class="row">
+                    <!-- Section Heading -->
+                    <div class="col-12">
+                        <div class="section-heading text-left white">
+                            <h2>Jadwal Ibadah</h2>
+                            <p>( Klik tanda panah disamping untuk melihat jadwal ibadah )</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Upcoming Events Slide -->
+        <div class="upcoming-events-slides-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="upcoming-slides owl-carousel">
+
+                            <div class="single-slide">
+                                <!-- Single Upcoming Events Area -->
+                                <div class="single-upcoming-events-area d-flex flex-wrap align-items-center">
+                                    <!-- Content -->
+                                    <div class="upcoming-events-content d-flex flex-wrap align-items-center">
+                                        <div class="events-text">
+                                            <h4>Seeing and Savoring Jesus Christ</h4>
+                                            <div class="events-meta">
+                                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> March 01, 2018</a>
+                                                <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 09:00 - 11:00</a>
+                                                <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> 11 Rose St, Brooklyn, NY</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Upcoming Events Area End ##### -->
     <!-- ##### Gallery Area Start ##### -->
     <div class="gallery-area d-flex flex-wrap">
         <!-- Single Gallery Area -->

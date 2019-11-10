@@ -55,6 +55,12 @@
             <span>Berita</span>
           </a>
         </li>
+                <li>
+          <a href="{{ route('warta') }}">
+            <i class="fa fa-newspaper-o"></i>
+            <span>Warta</span>
+          </a>
+        </li>
         <li>
           <a href="{{ route('kegiatan') }}">
             <i class="fa fa-calendar"></i>
@@ -65,6 +71,12 @@
           <a href="{{ route('gallery') }}">
             <i class="fa fa-image"></i>
             <span>Gallery</span>
+          </a>
+        </li>
+         <li>
+          <a href="{{ route('jadwal-ibadah') }}">
+            <i class="fa fa-calendar"></i>
+            <span>Jadwal Ibadah</span>
           </a>
         </li>
         <li>
