@@ -56,6 +56,7 @@
                                     <li><a href="{{url('/')}}">Home</a></li>
                                     <li><a href="{{ route('home-kegiatan') }}">Kegiatan</a></li>
                                     <li><a href="{{ route('home-berita') }}">Berita</a></li>
+                                     <li><a href="{{ route('home-warta') }}">Warta Jemaat</a></li>
                                      @if (Route::has('login'))
                                     @auth
                                     <li><a href="{{url('home')}}">Beranda</a></li>

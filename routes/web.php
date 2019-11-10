@@ -16,8 +16,10 @@
 // });
 Route::get('/', 'HomePageController@index');
 Route::get('home/berita', 'HomeBeritaController@index')->name('home-berita');
+Route::get('home/warta', 'HomeWartaController@index')->name('home-warta');
 Route::get('home/kegiatan', 'HomeKegiatanController@index')->name('home-kegiatan');
 Route::get('/berita/details/{id}', 'HomePageController@show')->name('berita-details');
+Route::get('/warta/details/{id}', 'HomePageController@wartaDetails')->name('warta-details');
 
 Auth::routes();
 

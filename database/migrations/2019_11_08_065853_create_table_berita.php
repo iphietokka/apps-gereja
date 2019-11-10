@@ -17,7 +17,7 @@ class CreateTableBerita extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->longText('isi_berita');
-            $table->string('gambar');
+            $table->string('gambar')->nullable();
             $table->integer('user_id');
             $table->timestamps();
         });

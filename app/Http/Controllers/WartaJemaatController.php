@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\WartaJemaat;
+use App\Http\Requests\WartaJemaatRequest;
 use Auth;
 use File;
 
@@ -42,12 +43,13 @@ class WartaJemaatController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(WartaJemaatRequest $request)
     {
         $data = new WartaJemaat();
         $data->title = $request->get('title');
         $data->isi_warta = $request->get('isi_warta');
         $data->user_id = Auth::user()->id;
+        $data->dokumen = $request->get('dokumen');
         $data->gambar = $request->get('gambar');
         if ($request->hasFile('gambar')) {
             $file = $request->file('gambar');
@@ -57,7 +59,6 @@ class WartaJemaatController extends Controller
             $request->file('gambar')->move($destination_path, $filename);
             $data->gambar = $filename;
         }
-        $data->dokumen = $request->get('dokumen');
         if ($request->hasFile('dokumen')) {
             $file = $request->file('dokumen');
             $file_extension = $file->getClientOriginalName();
@@ -147,7 +148,7 @@ class WartaJemaatController extends Controller
     {
         if ($data = WartaJemaat::find($id)) {
             $filename = $data->gambar;
-            $fullPath = public_path("gambar/warta/{$data->dokumen}");
+            $fullPath = public_path("gambar/warta/{$data->gambar}");
             if (File::exists($fullPath)) {
                 File::delete($fullPath);
             }

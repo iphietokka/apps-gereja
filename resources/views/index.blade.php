@@ -93,24 +93,27 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="upcoming-slides owl-carousel">
-
+                            @if($jadwal)
+                            @foreach($jadwal as $jd)
                             <div class="single-slide">
                                 <!-- Single Upcoming Events Area -->
                                 <div class="single-upcoming-events-area d-flex flex-wrap align-items-center">
                                     <!-- Content -->
                                     <div class="upcoming-events-content d-flex flex-wrap align-items-center">
                                         <div class="events-text">
-                                            <h4>Seeing and Savoring Jesus Christ</h4>
+                                            <h4>{{$jd->nama_ibadah}}</h4>
                                             <div class="events-meta">
-                                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> March 01, 2018</a>
-                                                <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 09:00 - 11:00</a>
-                                                <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> 11 Rose St, Brooklyn, NY</a>
+                                               <i class="fa fa-user" aria-hidden="true"></i> Nama Pengkhotbah : <span>{{$jd->nama_pengkhotbah}}</span><br>
+                                                <i class="fa fa-calendar" aria-hidden="true"></i> Tanggal :  {{$kg->tanggal}}<br>
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i> Jam :  {{$jd->jam_mulai}} - {{$jd->jam_selesai}}<br>
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i> Tempat :  {{$jd->tempat}}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
+                            @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -118,6 +121,7 @@
         </div>
     </section>
     <!-- ##### Upcoming Events Area End ##### -->
+    
     <!-- ##### Gallery Area Start ##### -->
     <div class="gallery-area d-flex flex-wrap">
         <!-- Single Gallery Area -->
@@ -132,6 +136,48 @@
         @endif
     </div>
     <!-- ##### Gallery Area End ##### -->
+
+    <!-- ##### Blog Area Start ##### -->
+    <section class="blog-area section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <!-- Section Heading -->
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h2>Warta Jemaat Terbaru</h2>
+                        <p>Latest information on religion, church</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- Single Blog Post Area -->
+                @if($warta)
+                @foreach ($warta as $item)
+                     <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-blog-post mb-100">
+                        <div class="post-thumbnail">
+                            <a href="{{route('warta-details', $item->id)}}"><img src="{{asset('gambar/warta')}}/{{$item->gambar}}" alt=""></a>
+                        </div>
+                        <div class="post-content">
+                            <a href="{{route('warta-details', $item->id)}}" class="post-title">
+                                <h4>{{$item->title}}</h4>
+                            </a>
+                            <div class="post-meta d-flex">
+                                <a href="#"><i class="fa fa-user" aria-hidden="true"></i> {{$item->users->name}}</a>
+                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> {{date('d F Y', strtotime($item->created_at))}}</a>
+                            </div>
+                            <p class="post-excerpt">{{$item->isi_warta}}</p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+                @endif
+               
+            </div>
+        </div>
+    </section>
+    <!-- ##### Blog Area End ##### -->
 
     <!-- ##### Blog Area Start ##### -->
     <section class="blog-area section-padding-100-0">

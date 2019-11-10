@@ -4,13 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\Gereja;
-use App\Model\Berita;
-use App\Model\Galery;
-use App\Model\JadwalIbadah;
-use App\Model\Kegiatan;
 use App\Model\WartaJemaat;
+use App\Model\Galery;
 
-class HomePageController extends Controller
+class HomeWartaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,12 +17,10 @@ class HomePageController extends Controller
     public function index()
     {
         $gereja = Gereja::all();
-        $berita = Berita::all();
+        // $berita = DB::table('table_berita')->paginate(5);
+        $warta = WartaJemaat::paginate(5);
         $gallery = Galery::all();
-        $kegiatan = Kegiatan::all();
-        $warta = WartaJemaat::all();
-        $jadwal = JadwalIbadah::all();
-        return view('index', compact('gereja', 'berita', 'gallery', 'kegiatan', 'warta', 'jadwal'));
+        return view('warta', compact('gereja', 'warta', 'gallery'));
     }
 
     /**
@@ -33,18 +28,9 @@ class HomePageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function create()
     {
-        $gereja = Gereja::all();
-        $beritas = Berita::find($id);
-        return view('details', compact('beritas', 'gereja'));
-    }
-
-    public function wartaDetails($id)
-    {
-        $gereja = Gereja::all();
-        $wartas = WartaJemaat::find($id);
-        return view('details-warta', compact('wartas', 'gereja'));
+        //
     }
 
     /**
@@ -54,6 +40,17 @@ class HomePageController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
         //
     }
