@@ -96,13 +96,6 @@ Route::get('kegiatan/edit/{id}', 'KegiatanController@edit')->name('kegiatan-edit
 Route::post('kegiatan/update', 'KegiatanController@update')->name('kegiatan-update');
 Route::delete('kegiatan/{id}', 'KegiatanController@destroy')->name('kegiatan-delete');
 
-Route::get('pendaftaran-baptis', 'PendaftaranBaptisController@index')->name('pendaftaran-baptis');
-Route::get('pendaftaran-baptis/create', 'PendaftaranBaptisController@create')->name('pendaftaran-baptis-create');
-Route::post('pendaftaran-baptis/store', 'PendaftaranBaptisController@store')->name('pendaftaran-baptis-store');
-Route::get('pendaftaran-baptis/edit/{id}', 'PendaftaranBaptisController@edit')->name('pendaftaran-baptis-edit');
-Route::post('pendaftaran-baptis/update', 'PendaftaranBaptisController@update')->name('pendaftaran-baptis-update');
-Route::delete('pendaftaran-baptis/{id}', 'PendaftaranBaptisController@destroy')->name('pendaftaran-baptis-delete');
-
 Route::get('jadwal-ibadah', 'JadwalIbadahController@index')->name('jadwal-ibadah');
 Route::get('jadwal-ibadah/create', 'JadwalIbadahController@create')->name('jadwal-ibadah-create');
 Route::post('jadwal-ibadah/store', 'JadwalIbadahController@store')->name('jadwal-ibadah-store');
@@ -116,3 +109,25 @@ Route::post('warta/store', 'WartaJemaatController@store')->name('warta-store');
 Route::get('warta/edit/{id}', 'WartaJemaatController@edit')->name('warta-edit');
 Route::post('warta/edit', 'WartaJemaatController@update')->name('warta-update');
 Route::delete('warta/{id}', 'WartaJemaatController@destroy')->name('warta-delete');
+
+
+Route::get('pendaftaran-baptis', 'PendaftaranBaptisController@index')->name('pendaftaran-baptis');
+Route::get('pendaftaran-baptis/create', 'PendaftaranBaptisController@create')->name('pendaftaran-baptis-create');
+Route::post('pendaftaran-baptis/store', 'PendaftaranBaptisController@store')->name('pendaftaran-baptis-store');
+Route::get('pendaftaran-baptis/edit/{id}', 'PendaftaranBaptisController@edit')->name('pendaftaran-baptis-edit');
+Route::post('pendaftaran-baptis/update', 'PendaftaranBaptisController@update')->name('pendaftaran-baptis-update');
+Route::delete('pendaftaran-baptis/{id}', 'PendaftaranBaptisController@destroy')->name('pendaftaran-baptis-delete');
+
+Route::get('pendaftaran-sidi', 'PendaftaranSidiController@index')->name('pendaftaran-sidi');
+Route::get('pendaftaran-sidi/create', 'PendaftaranSidiController@create')->name('pendaftaran-sidi-create');
+Route::post('pendaftaran-sidi/store', 'PendaftaranSidiController@store')->name('pendaftaran-sidi-store');
+Route::get('pendaftaran-sidi/edit/{id}', 'PendaftaranSidiController@edit')->name('pendaftaran-sidi-edit');
+Route::post('pendaftaran-sidi/update', 'PendaftaranSidiController@update')->name('pendaftaran-sidi-update');
+Route::delete('pendaftaran-sidi/{id}', 'PendaftaranSidiController@destroy')->name('pendaftaran-sidi-delete');
+
+Route::get('pendaftaran-nikah', 'PendaftaranNikahController@index')->name('pendaftaran-nikah');
+Route::get('pendaftaran-nikah/create', 'PendaftaranNikahController@create')->name('pendaftaran-nikah-create');
+Route::post('pendaftaran-nikah/store', 'PendaftaranNikahController@store')->name('pendaftaran-nikah-store');
+Route::get('pendaftaran-nikah/edit/{id}', 'PendaftaranNikahController@edit')->name('pendaftaran-nikah-edit');
+Route::post('pendaftaran-nikah/update', 'PendaftaranNikahController@update')->name('pendaftaran-nikah-update');
+Route::delete('pendaftaran-nikah/{id}', 'PendaftaranNikahController@destroy')->name('pendaftaran-nikah-delete');

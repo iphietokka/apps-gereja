@@ -12,6 +12,7 @@ class AnggotaJemaat extends Model
         'keluarga_id',
         'nama',
         'gelar',
+        'nik',
         'tempat_lahir',
         'status_keluarga',
         'tgl_lahir',

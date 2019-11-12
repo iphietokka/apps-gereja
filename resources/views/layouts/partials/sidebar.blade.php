@@ -49,6 +49,22 @@
           </ul>
         </li>
 
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-users"></i>
+            <span>Pendaftaran</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ route('pendaftaran-baptis') }}"><i class="fa fa-circle-o"></i> Pendaftaran Baptis</a></li>
+            <li><a href="{{ route('pendaftaran-sidi') }}"><i class="fa fa-circle-o"></i> Pendaftaran Sidi</a></li>
+          <li><a href="{{ route('pendaftaran-nikah') }}"><i class="fa fa-circle-o"></i> Pendaftaran Nikah</a></li>
+            <li><a href=""><i class="fa fa-circle-o"></i> Umat Meninggal</a></li>
+          </ul>
+        </li>
+
         <li>
           <a href="{{ route('berita') }}">
             <i class="fa fa-newspaper-o"></i>
