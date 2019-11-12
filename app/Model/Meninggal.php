@@ -4,12 +4,12 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PendaftaranSidi extends Model
+class Meninggal extends Model
 {
-    protected $table = "table_pendaftaran_sidi";
+    protected $table = "table_meninggal";
 
     protected $fillable = [
-        'anggota_id', 'tgl_sidi', 'tempat_sidi', 'nama_pendeta'
+        'anggota_id', 'tanggal_kematian', 'tanggal_pemakaman', 'tempat_pemakaman'
     ];
 
     public function anggota()

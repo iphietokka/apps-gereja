@@ -93,9 +93,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="upcoming-slides owl-carousel">
-                            @if($jadwal)
-                            @foreach($jadwal as $jd)
                             <div class="single-slide">
+                                  @if($jadwal)
+                                    @foreach($jadwal as $jd)
                                 <!-- Single Upcoming Events Area -->
                                 <div class="single-upcoming-events-area d-flex flex-wrap align-items-center">
                                     <!-- Content -->
@@ -111,9 +111,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            @endforeach
+                                  @endforeach
                             @endif
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
         </div>
     </section>
     <!-- ##### Upcoming Events Area End ##### -->
-    
+
     <!-- ##### Gallery Area Start ##### -->
     <div class="gallery-area d-flex flex-wrap">
         <!-- Single Gallery Area -->

@@ -15,6 +15,11 @@ class CreateTablePendaftaranBaptis extends Migration
     {
         Schema::create('table_pendaftaran_baptis', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('anggota_id');
+            $table->string('tgl_baptis');
+            $table->string('nama_saksi');
+            $table->string('tempat_baptis');
+            $table->string('nama_pendeta');
             $table->timestamps();
         });
     }

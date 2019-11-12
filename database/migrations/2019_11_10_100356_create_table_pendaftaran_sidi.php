@@ -15,6 +15,10 @@ class CreateTablePendaftaranSidi extends Migration
     {
         Schema::create('table_pendaftaran_sidi', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('anggota_id');
+            $table->string('tgl_baptis');
+            $table->string('tempat_baptis');
+            $table->string('nama_pendeta');
             $table->timestamps();
         });
     }
